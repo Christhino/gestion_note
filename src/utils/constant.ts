@@ -3,7 +3,7 @@ export const TOKEN_EXPIRATION_DURATION = 3600000;
 
 export const REFRESH_TIME_DURATION = 10000;
 
-export const MATIERE_SYNCHRO = 60000;
+export const UE_SYNCHRO = 60000;
 
 export const USER_SYNCHRO = 600000;
 

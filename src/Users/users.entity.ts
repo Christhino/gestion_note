@@ -52,6 +52,6 @@ import {
     profile: UserProfile;
   
     @Column({ length: 2, nullable: true })
-    niveau?: string;
+    groupe?: string;
   }
   

@@ -7,7 +7,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { UEEntity } from './unite-enseignement.entity';
-// import { Document } from './document.entity';
+import { Transcription } from './transcrire-note.entity';
 import { UserProfile } from '../users/user-profile.entity';
 
 
@@ -31,8 +31,8 @@ export class Matiers {
   @ManyToOne(() => UEEntity, (ueentity) => ueentity.matiers)
   ueentity: UEEntity;
 
-//   @OneToMany(() => Document, (document) => document.conversation)
-//   ticketDocuments: Document[];
+  @OneToMany(() => Transcription, (transcription) => transcription.notetranscription)
+  noteTranscription: Transcription[];
 
   @Column({ nullable: true })
   isSynchronised: boolean;
