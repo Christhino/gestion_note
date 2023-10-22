@@ -24,6 +24,7 @@ import { User } from '../users/users.entity';
 import { Niveau } from '../users/niveau.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import * as bcrypt from 'bcrypt';
+
 import {
   TIMEOUT_DURATION,
   TOKEN_EXPIRATION_DURATION,
@@ -59,7 +60,7 @@ export class AuthService {
     const headersRequest = {
       'Content-Type': 'application/x-www-form-urlencoded',
       Authorization:
-        'Bearer 1s10iPT1qm9G4anjFe7iADrRxeZirS9Z4qKyaszoQbnOts6BC_UEL0A2MxQ5Xpd_',
+        `Bearer ${process.env.TOKEN}`,
     };
 
     const requestData = new URLSearchParams();
